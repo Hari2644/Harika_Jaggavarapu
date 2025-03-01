@@ -59,7 +59,7 @@ def load_data():
 df, faiss_index = load_data()
 
 st.markdown('<h1 class="chat-font">🤖 Harper Clone Chatbot</h1>', unsafe_allow_html=True)
-st.markdown('<h3 class="chat-font">Ask me anything, and I\'ll respond as Nirmal Gaud!</h3>', unsafe_allow_html=True)
+st.markdown('<h3 class="chat-font">Ask me anything, and I\'ll respond as Christian!</h3>', unsafe_allow_html=True)
 st.markdown("---")
 
 def find_closest_question(query, faiss_index, df):
@@ -97,9 +97,9 @@ if prompt := st.chat_input("Ask me anything..."):
             if retrieved_answer:
                 # Generate a refined answer using Gemini
                 refined_answer = generate_refined_answer(prompt, retrieved_answer)
-                response = f"**Nirmal Gaud**:\n{refined_answer}"
+                response = f"**Christian Harper**:\n{refined_answer}"
             else:
-                response = "**Nirmal Gaud**:\nI'm sorry, I cannot answer that question."
+                response = "**Christian Harper**:\nI'm sorry, I cannot answer that question."
         except Exception as e:
             response = f"An error occurred: {e}"
     
